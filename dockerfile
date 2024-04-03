@@ -19,3 +19,5 @@ EXPOSE 8080
 
 # Run the server when the container launches
 CMD ["npm", "start"]
+
+LABEL org.opencontainers.image.source https://github.com/pronet-alfirdan/image-node
