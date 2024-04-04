@@ -1,17 +1,24 @@
 version: '2'
 
+# Install container and run service image from the docker hub 
 services:
+  # this for install and build the container from the image 
   item-app:
-    image: docker.pkg.github.com/pronet-alfirdan/image-node/item-app:v1
+    image: docker.pkg.github.com/aldanrp/a433-microservices/item-app:v1
+     # this a restart policy when container stop  
+    restart: "unless-stopped"
     ports:
       - "80:8080"
     depends_on:
       - item-db
 
+ # this for install image volume can be used in container 
   item-db:
     image: mongo:3
     volumes:
       - app-db:/data/db
 
+# this a volume when using a container
 volumes:
   app-db:
+

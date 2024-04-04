@@ -20,4 +20,6 @@ EXPOSE 8080
 # Run the server when the container launches
 CMD ["npm", "start"]
 
-LABEL org.opencontainers.image.source https://github.com/pronet-alfirdan/image-node
+# Tag docker image for a github packages in selected repository, 
+#the name of repo must be same with image name  
+LABEL org.opencontainers.image.source https://github.com/aldanrp/a433-microservices
